@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
@@ -7,83 +7,18 @@ import Footer from "@/components/Footer";
 import ChatbotWidget from "@/components/ChatbotWidget";
 import JsonLd from "@/components/JsonLd";
 
-const jetbrains = localFont({
-  src: [
-    {
-      path: "./fonts/JetBrainsMono-100.woff2",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "./fonts/JetBrainsMono-200.woff2",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "./fonts/JetBrainsMono-300.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "./fonts/JetBrainsMono-400.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/JetBrainsMono-500.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/JetBrainsMono-600.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/JetBrainsMono-700.woff2",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "./fonts/JetBrainsMono-800.woff2",
-      weight: "800",
-      style: "normal",
-    },
-  ],
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
   variable: "--font-jetbrains",
   display: "swap",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
 });
 
-const spaceGrotesk = localFont({
-  src: [
-    {
-      path: "./fonts/SpaceGrotesk-300.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "./fonts/SpaceGrotesk-400.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "./fonts/SpaceGrotesk-500.woff2",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "./fonts/SpaceGrotesk-600.woff2",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "./fonts/SpaceGrotesk-700.woff2",
-      weight: "700",
-      style: "normal",
-    },
-  ],
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
   variable: "--font-space",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {

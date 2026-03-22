@@ -55,7 +55,7 @@ const SERVICES = [
 ];
 
 const STATS = [
-  { value: "38+", label: "GitHub Repos" },
+  { value: "55+", label: "GitHub Repos" },
   { value: "5K+", label: "Dev Hours" },
   { value: "2020", label: "Started Coding" },
   { value: "∞", label: "Problems to Solve" },
@@ -175,7 +175,7 @@ export default function HomeClient() {
               }}
             >
               <Image
-                src="/images/frank2.png"
+                src="/images/frank1.png"
                 alt="Frank Kelechi Oge"
                 fill
                 className="object-cover grayscale"
